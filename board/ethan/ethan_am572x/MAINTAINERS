@@ -1,0 +1,7 @@
+ETHAN_AM572X
+M:	Mr.Ethan.Gao <Mr.Ethan.Gao@gmail.com>
+S:	Maintained
+F:      board/ethan/common/
+F:	board/ethan/ethan_am572x/
+F:	include/configs/ethan_am572x.h
+F:	configs/ethan_am572x_defconfig

@@ -64,12 +64,19 @@ config TARGET_AM57XX_EVM
 	select DM_THERMAL
 	select TI_DRA7_THERMAL
 
+config TARGET_ETHAN_AM572X
+	bool "AM57XX"
+	select TI_I2C_BOARD_DETECT
+	select SPL_THERMAL
+	select DM_THERMAL
+	select TI_DRA7_THERMAL
+
 endchoice
 
 config SYS_SOC
 	default "omap5"
 
-if TARGET_DRA7XX_EVM || TARGET_AM57XX_EVM
+if TARGET_DRA7XX_EVM || TARGET_AM57XX_EVM || TARGET_ETHAN_AM572X
 menu "Voltage Domain OPP selections"
 
 choice
@@ -167,5 +174,6 @@ source "board/compulab/cm_t54/Kconfig"
 source "board/ti/omap5_uevm/Kconfig"
 source "board/ti/dra7xx/Kconfig"
 source "board/ti/am57xx/Kconfig"
+source "board/ethan/ethan_am572x/Kconfig"
 
 endif
