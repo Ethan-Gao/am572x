@@ -45,6 +45,11 @@
 				 !strncmp("A.30", board_ti_get_rev(), 3))
 #define board_is_am574x_idk()	board_ti_is("AM574IDK")
 #define board_is_am572x_idk()	board_ti_is("AM572IDK")
+#ifdef CONFIG_TARGET_ETHAN_AM572X
+#define board_is_ethan_am572x()  1
+#else
+#define board_is_ethan_am572x()  0
+#endif
 #define board_is_am571x_idk()	board_ti_is("AM571IDK")
 
 #ifdef CONFIG_DRIVER_TI_CPSW
@@ -1214,6 +1219,8 @@ int board_fit_config_name_match(const char *name)
 	} else if (board_is_am574x_idk() && !strcmp(name, "am574x-idk")) {
 		return 0;
 	} else if (board_is_am571x_idk() && !strcmp(name, "am571x-idk")) {
+		return 0;
+	} else if (board_is_ethan_am572x() && !strcmp(name, "ethan-am572x")) {
 		return 0;
 	}
 
