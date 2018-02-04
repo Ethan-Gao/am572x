@@ -81,7 +81,7 @@ DECLARE_GLOBAL_DATA_PTR;
 #define TPS65903X_PAD2_POWERHOLD_MASK		0x20
 
 const struct omap_sysinfo sysinfo = {
-	"Board: UNKNOWN(BeagleBoard X15?) REV UNKNOWN\n"
+	"Board: UNKNOWN(ETHAN AM5728) REV UNKNOWN\n"
 };
 
 static const struct dmm_lisa_map_regs beagle_x15_lisa_regs = {
