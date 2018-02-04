@@ -20,9 +20,9 @@
 
 #define DEFAULT_COMMON_BOOT_TI_ARGS \
 	"console=" CONSOLEDEV ",115200n8\0" \
-	"fdtfile=undefined\0" \
-	"bootpart=0:2\0" \
-	"bootdir=/boot\0" \
+	"fdtfile=am572x-idk.dtb\0" \
+	"bootpart=0:1\0" \
+	"bootdir=\0" \
 	"bootfile=zImage\0" \
 	"usbtty=cdc_acm\0" \
 	"vram=16M\0" \
